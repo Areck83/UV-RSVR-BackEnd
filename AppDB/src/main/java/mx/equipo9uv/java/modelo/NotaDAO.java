@@ -1,4 +1,4 @@
-package mx.equipo9uv;
+package mx.equipo9uv.java.modelo;
 
 import java.sql.SQLException;
 import java.sql.ResultSet;
@@ -12,7 +12,7 @@ import com.mysql.jdbc.Statement;
 
 //su objetivo es independizar la logica del negocio
 //
-public class DAO {
+public class NotaDAO {
     //Conectar internamente con la base de datos
     private static Conexion c = new Conexion();
 
@@ -71,7 +71,7 @@ public class DAO {
         cc = c.getConnection();
 
         try {
-            String sql = "insert into usuarios (id, nombre, matricula, accion, fechahora, salon, nota) values (?,?,?,?,?,?,?)";
+            String sql = "insert into nota (id, nombre, matricula, accion, fechahora, salon, nota) values (?,?,?,?,?,?,?)";
             consulta = (PreparedStatement) cc.prepareStatement(sql);
             consulta.setString(1, n.getId());
             consulta.setString(2, n.getNombre());

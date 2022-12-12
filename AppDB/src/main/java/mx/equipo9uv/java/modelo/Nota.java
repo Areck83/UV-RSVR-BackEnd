@@ -1,4 +1,4 @@
-package mx.equipo9uv;
+package mx.equipo9uv.java.modelo;
 
 import java.sql.Date;
 import java.time.LocalDateTime;

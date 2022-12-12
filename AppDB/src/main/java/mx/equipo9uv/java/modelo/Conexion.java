@@ -1,4 +1,4 @@
-package mx.equipo9uv;
+package mx.equipo9uv.java.modelo;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -11,8 +11,10 @@ public class Conexion {
     private static String url ="jdbc:mysql://127.0.0.1:3306/uvrsrvr";
     private static String driverName = "com.mysql.jdbc.Driver";
     //Estas variables del entorno donde se ejecute deben ser configuradas en la plataforma del despliegue
-    private static String username = processBuilder.environment().get("USERDB");
-    private static String password = processBuilder.environment().get("PASSDB");;
+    private static String username = "uvrsrvr";
+    private static String password = "";
+    //private static String username = processBuilder.environment().get("USERDB");
+    //private static String password = processBuilder.environment().get("PASSDB");;
     //Variable de conexion
     private static Connection connection = null;
 
